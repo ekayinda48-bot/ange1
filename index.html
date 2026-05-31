@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joyeux Anniversaire Angedie ❤️</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <style>
+        body { font-family: 'Manrope', sans-serif; background: #fdfbf7; }
+        .floating { animation: float 4s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+        .photo-card:hover { transform: translateY(-5px); transition: all 0.3s ease; box-shadow: 0 20px 25px -12px rgba(0,0,0,0.2); }
+        .heart-beat { animation: heartbeat 1.5s ease infinite; }
+        @keyframes heartbeat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+    </style>
+</head>
+<body>
+
+    <!-- Musique d'anniversaire (met ton fichier M4A dans le même dossier) -->
+    <audio id="birthdaySong" loop preload="auto">
+        <source src="hbd.m4a" type="audio/mp4">
+    </audio>
+
+    <header class="fixed top-0 left-0 w-full flex justify-between items-center px-4 md:px-16 py-4 bg-white/95 backdrop-blur-md z-50 border-b border-[#fed65b] shadow-sm">
+        <div class="font-playfair text-2xl md:text-3xl font-bold italic text-[#735c00]">Angedie ❤️</div>
+        <nav class="hidden md:flex gap-8 text-sm font-semibold">
+            <a href="#accueil" class="text-black border-b-2 border-[#fed65b] pb-1">Accueil</a>
+            <a href="#anime" class="text-gray-600 hover:text-black">Anime</a>
+            <a href="#drama" class="text-gray-600 hover:text-black">K-Drama</a>
+            <a href="#musiques" class="text-gray-600 hover:text-black">Ses titres</a>
+            <a href="#voeux" class="text-gray-600 hover:text-black">💌 Vœux</a>
+        </nav>
+        <div class="flex gap-2">
+            <span class="material-symbols-outlined text-[#e9c349] heart-beat">favorite</span>
+            <span class="material-symbols-outlined text-[#735c00]">celebration</span>
+        </div>
+    </header>
+
+    <main class="pt-24 pb-16">
+
+        <section id="accueil" class="px-4 md:px-16 py-16 md:py-24 text-center" style="background: linear-gradient(135deg, #fef9e6 0%, #fff4e0 100%);">
+            <div class="max-w-4xl mx-auto">
+                <div class="floating text-7xl mb-4">🎂🎈🎁</div>
+                <span class="bg-[#fed65b] text-black text-xs font-bold px-5 py-2 rounded-full">✨ LE GRAND JOUR ✨</span>
+                <h1 class="font-playfair text-5xl md:text-7xl font-bold italic mt-6 text-[#735c00]">Joyeux Anniversaire</h1>
+                <h2 class="font-playfair text-4xl md:text-6xl font-black mt-2 text-black">Angedie Yakambi !</h2>
+                <div class="w-24 h-1 bg-[#e9c349] mx-auto my-8 rounded-full"></div>
+                <p class="text-gray-700 text-lg max-w-2xl mx-auto">Aujourd'hui, le monde tourne un peu plus vite, les étoiles brillent un peu plus fort,<br>et mon cœur est rempli de gratitude pour toi.</p>
+                <button id="startMusicBtn" class="mt-8 bg-black text-[#fed65b] font-bold px-8 py-4 rounded-full shadow-lg hover:bg-gray-800 transition flex items-center gap-2 mx-auto">
+                    <span class="material-symbols-outlined">play_circle</span> Lancer la musique d'anniversaire
+                </button>
+                
+            </div>
+        </section>
+
+        <!-- SECTION ANIME - VOS IMAGES (liens directs) -->
+        <section id="anime" class="px-4 md:px-16 py-20 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-12">
+                    <span class="text-[#735c00] text-sm font-bold tracking-wider">⚡ SHONEN SPIRIT ⚡</span>
+                    <h2 class="font-playfair text-4xl md:text-5xl italic mt-2">Tes animes cultes</h2>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Attack on Titan -->
+                    <div class="photo-card bg-gray-50 rounded-2xl overflow-hidden shadow-md">
+                        <img src="https://4kwallpapers.com/images/wallpapers/attack-on-titan-2560x1440-10339.jpg" alt="Attack on Titan" class="w-full h-72 object-cover">
+                        <div class="p-4 text-center"><h3 class="font-bold text-lg">ATTACK ON TITAN</h3><p class="text-sm text-gray-500">"Shinzou wo sasageyo !"</p></div>
+                    </div>
+                    <!-- Demon Slayer -->
+                    <div class="photo-card bg-gray-50 rounded-2xl overflow-hidden shadow-md">
+                        <img src="https://4kwallpapers.com/images/wallpapers/demon-slayer-1920x1080-10716.jpg" alt="Demon Slayer" class="w-full h-72 object-cover">
+                        <div class="p-4 text-center"><h3 class="font-bold text-lg">DEMON SLAYER</h3><p class="text-sm text-gray-500">"La flamme ne s'éteint jamais."</p></div>
+                    </div>
+                    <!-- My Hero Academia -->
+                    <div class="photo-card bg-gray-50 rounded-2xl overflow-hidden shadow-md">
+                        <img src="https://images4.alphacoders.com/794/thumb-1920-794012.jpg" alt="My Hero Academia" class="w-full h-72 object-cover">
+                        <div class="p-4 text-center"><h3 class="font-bold text-lg">MY HERO ACADEMIA</h3><p class="text-sm text-gray-500">"PLUS ULTRA !"</p></div>
+                    </div>
+                    <!-- Haikyuu -->
+                    <div class="photo-card bg-gray-50 rounded-2xl overflow-hidden shadow-md">
+                        <img src="https://wallpaperaccess.com/full/412223.jpg" alt="Haikyuu" class="w-full h-72 object-cover">
+                        <div class="p-4 text-center"><h3 class="font-bold text-lg">HAIKYUU!!</h3><p class="text-sm text-gray-500">"Le terrain est à nous !"</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION K-DRAMA - VOS IMAGES (liens directs) -->
+        <section id="drama" class="px-4 md:px-16 py-20 bg-[#faf8f5]">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-12">
+                    <span class="text-[#735c00] text-sm font-bold tracking-wider">🎬 K-DRAMA ROMANCE 🎬</span>
+                    <h2 class="font-playfair text-4xl md:text-5xl italic mt-2">Tes dramas préférés</h2>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- It's Okay to Not Be Okay -->
+                    <div class="photo-card bg-white rounded-2xl overflow-hidden shadow-md">
+                        <img src="https://1.bp.blogspot.com/-Gea54DA0u3g/Xv18-emL3II/AAAAAAAAHmE/s9mBlcXnHDsW4MU6D0Knr13CG8G0LSN1gCLcBGAsYHQ/s1600/Its%2BOkay%2Bto%2BNot%2BBe%2BOkay%2Bepisode%2B1.jpg" alt="It's Okay to Not Be Okay" class="w-full h-72 object-cover">
+                        <div class="p-4 text-center"><h3 class="font-bold">It's Okay to Not Be Okay</h3><p class="text-sm">"Tu n'as pas besoin d'aller bien."</p></div>
+                    </div>
+                    <!-- Queen of Tears -->
+                    <div class="photo-card bg-white rounded-2xl overflow-hidden shadow-md">
+                        <img src="https://image.tmdb.org/t/p/original/gnkSyB7OYvFAF6oUN726nGSvgpL.jpg" alt="Queen of Tears" class="w-full h-72 object-cover">
+                        <div class="p-4 text-center"><h3 class="font-bold">Queen of Tears</h3><p class="text-sm">"L'amour même quand tout s'effondre."</p></div>
+                    </div>
+                    <!-- Little Women -->
+                    <div class="photo-card bg-white rounded-2xl overflow-hidden shadow-md">
+                        <img src="https://i.pinimg.com/originals/2d/06/6c/2d066c916ce95cdbacbc13491ce1d852.jpg" alt="Little Women" class="w-full h-72 object-cover">
+                        <div class="p-4 text-center"><h3 class="font-bold">Little Women</h3><p class="text-sm">"Trois sœurs, un seul destin."</p></div>
+                    </div>
+                    <!-- Flower of Evil -->
+                    <div class="photo-card bg-white rounded-2xl overflow-hidden shadow-md">
+                        <img src="https://i.ytimg.com/vi/QSmDCxfdiAA/maxresdefault.jpg" alt="Flower of Evil" class="w-full h-72 object-cover">
+                        <div class="p-4 text-center"><h3 class="font-bold">Flower of Evil</h3><p class="text-sm">"Un amour sous la menace."</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION MUSIQUES - LISTE -->
+        <section id="musiques" class="px-4 md:px-16 py-20 bg-white">
+            <div class="max-w-3xl mx-auto text-center">
+                <span class="bg-[#fed65b] px-6 py-1 rounded-full text-sm font-bold">🎵 TA PLAYLIST PERSONNELLE 🎵</span>
+                <h2 class="font-playfair text-4xl md:text-5xl italic mt-4">Les morceaux qui vibrent dans ton cœur</h2>
+                <p class="text-gray-600 mt-3">Ces chansons la font danser, pleurer, et rêver.</p>
+                <div class="mt-10 space-y-4 text-left">
+                    <div class="bg-gray-50 p-5 rounded-xl border-l-8 border-[#e9c349]"><span class="text-2xl mr-3">🎤</span><span class="font-bold text-lg">Tu m'as fait du bien</span><span class="text-gray-500 text-sm ml-2">— Christian Mukuna</span></div>
+                    <div class="bg-gray-50 p-5 rounded-xl border-l-8 border-[#bac8dc]"><span class="text-2xl mr-3">🎶</span><span class="font-bold text-lg">GOT</span><span class="text-gray-500 text-sm ml-2">— Worship Anthem</span></div>
+                    <div class="bg-gray-50 p-5 rounded-xl border-l-8 border-[#e9c349]"><span class="text-2xl mr-3">🎧</span><span class="font-bold text-lg">Turn It Around</span><span class="text-gray-500 text-sm ml-2">— John Reddick</span></div>
+                    <div class="bg-gray-50 p-5 rounded-xl border-l-8 border-[#bac8dc]"><span class="text-2xl mr-3">🎹</span><span class="font-bold text-lg">Acts 2</span><span class="text-gray-500 text-sm ml-2">— Gabriela Rocha</span></div>
+                    <div class="bg-gray-50 p-5 rounded-xl border-l-8 border-[#e9c349]"><span class="text-2xl mr-3">🎵</span><span class="font-bold text-lg">Spirit Break Out</span><span class="text-gray-500 text-sm ml-2">— William McDowell</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VŒUX -->
+        <section id="voeux" class="px-4 md:px-16 py-20 bg-gradient-to-r from-[#fef9e6] to-[#fff8ec]">
+            <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl p-8 md:p-12 border-2 border-[#fed65b]">
+                <div class="text-center mb-8"><span class="text-6xl">💌</span><h2 class="font-playfair text-4xl md:text-5xl italic mt-3 text-[#735c00]">Pour toi, Angedie</h2></div>
+                <div class="space-y-5 text-gray-700 text-lg md:text-xl leading-relaxed">
+                    <p>Angedie,</p>
+                    <p>Aujourd'hui, c'est ton jour. Celui où le monde devrait s'arrêter une seconde pour reconnaître à quel point tu es précieuse. Tu es cette amie qui arrive comme une bouffée d'air frais dans une pièce trop étouffante, celle qui écoute sans juger.Que cette journée soit remplie de bonheur, de rires et de merveilleux souvenirs.
+Je te souhaite une année pleine de réussite, de santé et de belles surprises.
+Que tous tes rêves se réalisent et que chaque jour t'apporte une nouvelle raison de sourire.
+Profite pleinement de cette journée spéciale, car tu mérites tout le bonheur du monde.</p>
+                    
+                    <p class="font-bold text-center mt-8 text-black text-xl">Joyeux anniversaire, Angedie.</p>
+                    <p class="text-center text-[#e9c349] text-lg">🎂❤️🎈</p>
+                </div>
+                <div class="mt-8 text-right italic text-gray-500 border-t pt-6">— eky —</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black text-white py-8 text-center">
+        <p class="text-sm">❤️Angedie Yakambi · Shonen Heart &amp; Hallyu Soul ❤️</p>
+    </footer>
+
+    <script>
+        const audio = document.getElementById('birthdaySong');
+        let musicStarted = false;
+        function startBirthdayMusic() {
+            if (!musicStarted) {
+                audio.play().then(() => { musicStarted = true; }).catch(err => { alert("Clique pour lancer la musique 🎂\n\nVérifie que le fichier hbd.m4a est dans le même dossier."); });
+            }
+        }
+        document.getElementById('startMusicBtn').addEventListener('click', startBirthdayMusic);
+    </script>
+</body>
+</html>
